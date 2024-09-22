@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://lesmacaronshottekiet.fr/style.css?v=1.4"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <!--LIEN JS - BANNIERE COOKIES -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ca1e56fc-8b6e-4977-947d-0017e3c8759e" type="text/javascript"></script>
+    
+    <title>Les macarons Hottekiet | Angers</title>
+    <link rel="icon" href="https://lesmacaronshottekiet.fr/images/logo-lesmacaronshottekiet.png" type="image/png">
+    <meta name="description" content="Les macarons Hottekiet à Angers vous régalent depuis 2012 avec des macarons artisanaux. Commandez dans nos boutiques pour une expérience gourmande unique.">
+    <meta name="keywords" content="macarons angers, Les macarons Hottekiet, meilleurs macarons Angers, macaron mariage angers, macarons marché de noël">
+    <link rel="canonical" href="https://lesmacaronshottekiet.fr" />
+    <meta name="tdm-policy" content="not-allowed">
+
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!--                 NAVIGATION                   -->
+    <!-- ============================================ -->
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <a href="https://lesmacaronshottekiet.fr" class="cs-logo" aria-label="back to home">
+                <picture>
+                    <source srcset="https://lesmacaronshottekiet.fr/images/logo-lesmacaronshottekiet-black.webp" type="image/webp">
+                    <img src="https://lesmacaronshottekiet.fr/images/logo-lesmacaronshottekiet-black.webp" alt="Les macarons Hottekiet | logo">
+                </picture>
+            </a>
+            <nav class="cs-nav" role="navigation">
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr#tableau" class="cs-li-link" data-en="Our Range" data-fr="Notre Gamme">
+                                Notre Gamme
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr/pages-ext/a-propos-de-nous.html" class="cs-li-link" data-en="About us" data-fr="À propos de nous">
+                                À propos de nous
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr/pages-ext/parfums.html" class="cs-li-link" data-en="Perfumes/Allergies" data-fr="Parfums/Allergies">
+                                Parfums/Allergies
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr#boutiques" class="cs-li-link" data-en="Shops" data-fr="Boutiques">
+                                Boutiques
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr/pages-ext/galerie.html" class="cs-li-link" data-en="Gallery" data-fr="Galerie">
+                                Galerie
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr#contact" class="cs-li-link" data-en="Contact" data-fr="Contact">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="cs-li-flag">
+                            <button id="changeLanguageBtn" >
+                                <img id="flagIcon" alt="Drapeau">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="https://lesmacaronshottekiet.fr/pages-ext/formulaireCommande.html" class="cs-button-solid cs-nav-button" data-en="Order" data-fr="Commander">Commander</a>                   
+        </div>
+    </header>
+    
+    <!-- ============================================ -->
+    <!--            LISTE DES PARFUMS                 -->
+    <!-- ============================================ -->
+    <section id="menu">
+        <div class="cs-container">
+            <div class="cs-content">
+                <picture class="cs-wrapper" aria-hidden="true">
+                    <source srcset="https://lesmacaronshottekiet.fr/images/separation_lesmacaronshottekiet.webp" type="image/webp">
+                    <img class="cs-decal" src="https://lesmacaronshottekiet.fr/images/separation_lesmacaronshottekiet.webp" decoding="async" alt="Les macarons Hottekiet | séparation" loading="lazy">
+                </picture>
+                <h2 class="cs-title" data-en="OUR MACARONS" data-fr="NOS MACARONS">NOS MACARONS</h2>
+                <input type="text" id="searchInput" placeholder="Rechercher par nom...">
+            </div>
+            <div id="suggestions"></div>
+            <div  id="liste-sucres">
+                <span class="cs-topper" data-en="LIST OF" data-fr="LISTE DES">LISTE DES</span>
+                <h2 class="cs-title" data-en="SWEET" data-fr="SUCRÉS">SUCRÉS</h2>
+            </div>
+            <ul id="productList" class="cs-card-group">
+                <!-- MACARON AMANDE -->
+                <!--<li class="cs-item" id="amande">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/amende.png" alt="macaron amande">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Almond" data-fr="Amande">Amande</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> whites, starch, acidity regulators (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, milk chocolate caramel flavour caramel flavour 0.7%, cocoa butter, whole <strong>milk</strong> powder, cocoa mass, <strong>soya</strong> lecithin, flavourings, roasted <strong>almonds</strong> 30%, low-fat cocoa powder." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, chocolat au lait saveur caramel 0.7%, beurre de cacao, poudre de <strong>lait</strong> entier, pâte de cacao, lécithine de <strong>soja</strong>, arômes, <strong>amandes</strong> torréfiés 30%, cacao maigre en poudre.">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, chocolat au lait saveur caramel 0.7%, beurre de cacao, poudre de <strong>lait</strong> entier, pâte de cacao, lécithine de <strong>soja</strong>, arômes, <strong>amandes</strong> torréfiés 30%, cacao maigre en poudre.
+                        </p>
+                    </div>
+                </li>-->
+                <!-- MACARON ANGEVIN -->
+                <li class="cs-item" id="angevin">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-angevin_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-angevin_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : angevin">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Angevin</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> whites, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, cocoa butter, whole <strong>milk</strong> powder, skimmed <strong>milk</strong> powder, emulsifier (sunflower lecithin) vanilla flavouring (may contain contain traces of <strong>gluten</strong> and <strong>peanuts</strong>), <strong>milk</strong> cream, stabiliser : carrageenan. Colour indigo blue (E132) -> indigo carmine 85% and sodium sulphate chloride 15%." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, beurre de cacao, poudre de <strong>lait</strong> entier, poudre de <strong>lait</strong> écrémé, émulsifiant (lécithine de tournesol) arôme vanille (peut contenir des traces de <strong>gluten</strong> et d’<strong>arachides</strong>), crème de <strong>lait</strong>, stabilisant : carraghénanes. Colorant bleu indigo (E132) -> carmin d’indigo 85% et Chlorure de sulfate de sodium 15%.">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, beurre de cacao, poudre de <strong>lait</strong> entier, poudre de <strong>lait</strong> écrémé, émulsifiant (lécithine de tournesol) arôme vanille (peut contenir des traces de <strong>gluten</strong> et d’<strong>arachides</strong>), crème de <strong>lait</strong>, stabilisant : carraghénanes. Colorant bleu indigo (E132) -> carmin d’indigo 85% et Chlorure de sulfate de sodium 15%.
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON AUX 2 CHOCOLATS -->
+                <li class="cs-item" id="aux-deux-chocolats">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-2chocolats_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-2chocolats_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : 2 chocolats">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Two Chocolate" data-fr="Aux Deux Chocolats">Aux Deux Chocolats</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> whites, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, superior <strong>milk</strong> chocolate 40% (sugar, <strong>milk</strong> powder, cocoa butter, cocoa mass, emulsifiers : <strong>soya</strong> lecithin, vanillin, sugar), skimmed <strong>milk</strong> powder, palm oil, concentrated butter, <strong>milk</strong> cream, carrageenan stabiliser, colour (E102), (E129) and (E151)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, chocolat supérieur au <strong>lait</strong> 40% (sucre, <strong>lait</strong> en poudre, beurre de cacao, pâte de cacao, émulsifiants : lécithine de <strong>soja</strong>, vanilline, sucre), <strong>lait</strong> écrémé en poudre, huile de palme, beurre concentré, crème de <strong>lait</strong>, stabilisant carraghénanes, colorant (E102), (E129) et (E151).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, chocolat supérieur au <strong>lait</strong> 40% (sucre, <strong>lait</strong> en poudre, beurre de cacao, pâte de cacao, émulsifiants : lécithine de <strong>soja</strong>, vanilline, sucre), <strong>lait</strong> écrémé en poudre, huile de palme, beurre concentré, crème de <strong>lait</strong>, stabilisant carraghénanes, colorant (E102), (E129) et (E151).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON BERGAMOTE -->
+                <li class="cs-item" id="bergamote">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-bergamote_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-bergamote_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : bergamote">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Bergamot" data-fr="Bergamote">Bergamote</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, <strong>milk</strong>, starch, acidity regulator (E330) and (E331), preservative (E202) thickener (E402) and (E415), water, fats : acids saturated fat, carbohydrates, sugar, proteins, salt, <strong>black sesame seeds</strong>, tartrazine 87%, chloride and sodium sulfate 13%, bergamot, lemon yellow coloring (E102)" 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, <strong>lait</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202) épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, protéines, sel , <strong>graines de sésames noir</strong>, tartrazine 87%, chlorure et sulfate de sodium 13%, bergamote, colorant jaune citron (E102).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, <strong>lait</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202) épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, protéines, sel , <strong>graines de sésames noir</strong>, tartrazine 87%, chlorure et sulfate de sodium 13%, bergamote, colorant jaune citron (E102).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON BONBON A LA FRAISE -->
+                <!--<li class="cs-item" id="bonbon-fraise">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/bonbon_fraise.png" alt="Les macarons Hottekiet | macaron : bonbon fraise">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Strawberry Candy" data-fr="Bonbon à la Fraise">Bonbon à la Fraise</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, butter cream, liquid cream, <strong>milk</strong>, carrageenan stabilizer, glucose syrup, gelatin, acidifier, citric acid, aroma : fruit and plant concentrates: radish, carrots, safflower, lemon, sugar syrup warned, coloring (E129)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, crème au beurre, crème liquide, <strong>lait</strong>, stabilisant carragénhanes, sirop de glucose, gélatine, acidifiant, acide citrique, arôme : concentrés de fruits et de plantes : radis, carottes, carthame, citron, sirop de sucre avertis, colorant (E129).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, crème au beurre, crème liquide, <strong>lait</strong>, stabilisant carragénhanes, sirop de glucose, gélatine, acidifiant, acide citrique, arôme : concentrés de fruits et de plantes : radis, carottes, carthame, citron, sirop de sucre avertis, colorant (E129).
+                        </p>
+                    </div>
+                </li>-->
+                <!-- MACARON BONBON AU CARAMEL -->
+                <li class="cs-item" id="bonbon-au-caramel">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-bonboncaramel_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-bonboncaramel_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : bonbon caramel">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Caramel Candy" data-fr="Bonbon au Caramel">Bonbon au Caramel</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, corrector of acidities (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, syrup glucose, sweetened condensed skimmed <strong>milk</strong>, sugar, palm oil, bitter cocoa powder, salt, emulsifiers (E471) sunflower lecithin, flavorings, fat : saturated fatty acids, carbohydrates, sugar, proteins, salt, color (E102), (E122), (E129), (E131) and (E151)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, sirop de glucose, <strong>lait</strong> écrémé concentré sucré, sucre, huile de palme, cacao amer en poudre, sel, émulsifiants (E471) lécithine de tournesol, arômes, matières grasse : acides gras saturés, glucides, sucre, protéines, sel, colorant (E102), (E122), (E129), (E131) et (E151).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, sirop de glucose, <strong>lait</strong> écrémé concentré sucré, sucre, huile de palme, cacao amer en poudre, sel, émulsifiants (E471) lécithine de tournesol, arômes, matières grasse : acides gras saturés, glucides, sucre, protéines, sel, colorant (E102), (E122), (E129), (E131) et (E151).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON CAFE -->
+                <li class="cs-item" id="cafe">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-cafe_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-cafe_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : café">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Coffee" data-fr="Café">Café</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202) thickener (E402) and (E415), water, sugar, fats (acids saturated fat), carbohydrates, sugar, proteins, salt, 100% pure coffee." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202) épaississant (E402) et (E415), eau, sucre, matières grasses (acides gras saturés), glucides, sucre, protéines, sel, café pur 100%.">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202) épaississant (E402) et (E415), eau, sucre, matières grasses (acides gras saturés), glucides, sucre, protéines, sel, café pur 100%.
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON CARAMEL BEURRE SALE -->
+                <li class="cs-item" id="caramel-beurre-sale">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-caramel_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-caramel_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : caramel">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Salted Butter Caramel" data-fr="Caramel Beurre Salé">Caramel Beurre Salé</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, corrector of acidities (E330) and (E331) preservative (E202) thickener (E402) and (E415) water, sugar, cream <strong>milk</strong>, carrageenan stabilizer, fat : saturated fatty acids, carbohydrates, sugar, proteins, salt, colorings (E102), (E129) and (E151)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331) conservateur (E202) épaississant (E402) et (E415) eau, sucre, crème de <strong>lait</strong>, stabilisant carraghénanes, matières grasse : acides gras saturés, glucides, sucre, protéines, sel, colorants (E102), (E129) et (E151).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331) conservateur (E202) épaississant (E402) et (E415) eau, sucre, crème de <strong>lait</strong>, stabilisant carraghénanes, matières grasse : acides gras saturés, glucides, sucre, protéines, sel, colorants (E102), (E129) et (E151).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON CASSIS -->
+                <li class="cs-item" id="cassis">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-cassis_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-cassis_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : cassis">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Cassis</span>
+                            <span class="cs-price">
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202) thickener (E402) and (E415), water, sugar, fats (acids saturated fat), carbohydrates, sugar, proteins, salt, <strong>milk</strong>, blackcurrant, food coloring (E122) and (E132)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202) épaississant (E402) et (E415), eau, sucre, matières grasses (acides gras saturés), glucides, sucre, protéines, sel, <strong>lait</strong>, cassis, colorant alimentaire (E122) et (E132).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202) épaississant (E402) et (E415), eau, sucre, matières grasses (acides gras saturés), glucides, sucre, protéines, sel, <strong>lait</strong>, cassis, colorant alimentaire (E122) et (E132).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON CEREALE CROUSTILLANTE AU CHOCOLAT AU LAIT -->
+                <li class="cs-item" id="cereale-croustillante">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-cerealecroustillante_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-cerealecroustillante_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : céréale croustillante">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Crispy Cereal" data-fr="Céréale Croustillante">Céréale Croustillante</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity corrector (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, cocoa butter, cocoa paste, skimmed <strong>milk</strong> powder, <strong>milk</strong> fat, emulsifier : sunflower lecithin, vanilla flavor, <strong>milk</strong> chocolate, pastry butter, <strong>whey</strong> powder, <strong>lactose</strong> crispy cereals : <strong>wheat</strong> flour, <strong>wheat gluten</strong>, malted <strong>wheat</strong> flour, baking powder (sodium carbonate), palm oil, shea oil, glucose syrup, acacia gum, coloring (E102), (E129) and (E151)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, beurre de cacao pâte de cacao, poudre de <strong>lait</strong> écrémé, matières grasse de <strong>lait</strong>, émulsifiant : lécithine de tournesol, arôme vanille, chocolat au <strong>lait</strong>, beurre pâtissier, petit <strong>lait</strong> en poudre, <strong>lactose</strong> céréales croustillantes : farine de <strong>blé</strong>, <strong>gluten de blé</strong>, farine de <strong>blé</strong> maltée, poudre à lever (carbonate de sodium), huile de palme, huile de karité, sirop de glucose, gomme d’acacias, colorant (E102), (E129) et (E151).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, beurre de cacao pâte de cacao, poudre de <strong>lait</strong> écrémé, matières grasse de <strong>lait</strong>, émulsifiant : lécithine de tournesol, arôme vanille, chocolat au <strong>lait</strong>, beurre pâtissier, petit <strong>lait</strong> en poudre, <strong>lactose</strong> céréales croustillantes : farine de <strong>blé</strong>, <strong>gluten de blé</strong>, farine de <strong>blé</strong> maltée, poudre à lever (carbonate de sodium), huile de palme, huile de karité, sirop de glucose, gomme d’acacias, colorant (E102), (E129) et (E151).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON CERISE -->
+                <li class="cs-item" id="cerise">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-cerise_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-cerise_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : cerise">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Cherry" data-fr="Cerise">Cerise</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, fats : acids saturated fat, carbohydrates, sugar, proteins, salt, <strong>milk</strong>, cherry coloring (E129) and (E133)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, cerise colorant (E129) et (E133).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, cerise colorant (E129) et (E133).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON CHOCOLAT -->
+                <li class="cs-item" id="chocolat">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-chocolat_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-chocolat_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : chocolat">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Chocolate" data-fr="Chocolat">Chocolat</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202) thickener (E402) and (E415), water, sugar, cocoa mass, sugar, cocoa butter, emulsifiers : sunflower lecithin, natural flavor, <strong>milk</strong> cream, stabilizer carrageenans, coloring (E102), (E129) and (E151)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202) épaississant (E402) et (E415), eau, sucre, pâte de cacao, sucre, beurre de cacao, émulsifiants : lécithine de tournesol, arôme naturel, crème de <strong>lait</strong>, stabilisant carraghénanes, colorant (E102), (E129) et (E151).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202) épaississant (E402) et (E415), eau, sucre, pâte de cacao, sucre, beurre de cacao, émulsifiants : lécithine de tournesol, arôme naturel, crème de <strong>lait</strong>, stabilisant carraghénanes, colorant (E102), (E129) et (E151).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON CHOCOLAT BLANC -->
+                <li class="cs-item" id="choco-blanc">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-chocolatblanc_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-chocolatblanc_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : chocolat blanc">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="White Chocolate" data-fr="Chocolat Blanc">Chocolat Blanc</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar sugar, cocoa butter, whole <strong>milk</strong> powder, skimmed <strong>milk</strong> powder, emulsifier, <strong>soya</strong>, lecithin sunflower, carrageenan." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre sucre, beurre de cacao, poudre de <strong>lait</strong> entier, poudre de <strong>lait</strong> écrémé, émulsifiant, <strong>soja</strong>, lécithine de tournesol, carraghénanes.">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre sucre, beurre de cacao, poudre de <strong>lait</strong> entier, poudre de <strong>lait</strong> écrémé, émulsifiant, <strong>soja</strong>, lécithine de tournesol, carraghénanes.
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON CHOCOLAT CARAMEL CACAHUETE -->
+                <li class="cs-item" id="chocolat-caramel-cacahuete">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-chocolatcacahuete.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-chocolatcacahuete.webp" alt="Les macarons Hottekiet | macaron : chocolat caramel cacahuète">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Chocolate Caramel Peanut" data-fr="Chocolat Caramel Cacahuète">Chocolat Caramel Cacahuète</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, corrector acidity (E330) and (E331), preservative (E202), thickener (E402) and (E415), cocoa paste, cocoa butter, emulsifier, sunflower lecithin, natural flavor, <strong>peanut</strong>, water, sugar, paste cocoa, sugar, cocoa butter, emulsifiers : sunflower lecithin, natural flavor, cocoa cream <strong>milk</strong>, carrageenan stabilizer, food coloring (E102), (E129) and (E151)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), pâte de cacao, beurre de cacao, émulsifiant, lécithine de tournesol, arôme naturel, <strong>cacahuète</strong>, eau, sucre, pâte de cacao, sucre, beurre de cacao, émulsifiants : lécithine de tournesol, arôme naturel, crème de <strong>lait</strong>, stabilisant carraghénanes, colorant alimentaire (E102), (E129) et (E151).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), pâte de cacao, beurre de cacao, émulsifiant, lécithine de tournesol, arôme naturel, <strong>cacahuète</strong>, eau, sucre, pâte de cacao, sucre, beurre de cacao, émulsifiants : lécithine de tournesol, arôme naturel, crème de <strong>lait</strong>, stabilisant carraghénanes, colorant alimentaire (E102), (E129) et (E151).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON CITRON -->
+                <li class="cs-item" id="citron">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-citron_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-citron_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : citron">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Lemon" data-fr="Citron">Citron</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, <strong>milk</strong>, fat : saturated fatty acids, carbohydrates, sugar, proteins, salt, lemon, yellow coloring (E102)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, <strong>lait</strong>, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, citron, colorant jaune (E102).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, <strong>lait</strong>, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, citron, colorant jaune (E102).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON COCO -->
+                <li class="cs-item" id="coco">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-coco_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-coco_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : coco">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Coco</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, cocoa butter, cocoa powder whole <strong>milk</strong>, skimmed <strong>milk</strong> powder, emulsifier, sunflower lecithin, carrageenan, sugar gum xanthan, stabilizer (E491), grated coconut, coconut cream." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, beurre de cacao, poudre de <strong>lait</strong> entier, poudre de <strong>lait</strong> écrémé, émulsifiant, lécithine de tournesol, carraghénanes, gomme de xanthane, stabilisant (E491), noix de coco râpé, crème de coco.">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, beurre de cacao, poudre de <strong>lait</strong> entier, poudre de <strong>lait</strong> écrémé, émulsifiant, lécithine de tournesol, carraghénanes, gomme de xanthane, stabilisant (E491), noix de coco râpé, crème de coco.
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON COINTREAU -->
+                <li class="cs-item" id="cointreau">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-cointreau_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-cointreau_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : cointreau">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Cointreau</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, cocoa butter, cocoa powder whole <strong>milk</strong>, emulsifier, <strong>soya</strong> lecithin, natural orange flavor, color (E160), natural orange flavor vanilla, Cointreau, coloring (E102) and (E129)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, beurre de cacao, poudre de <strong>lait</strong> entier, émulsifiant, lécithine de <strong>soja</strong>, arôme naturel d’orange, colorant (E160), arôme naturel de vanille, cointreau, colorant (E102) et (E129).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, beurre de cacao, poudre de <strong>lait</strong> entier, émulsifiant, lécithine de <strong>soja</strong>, arôme naturel d’orange, colorant (E160), arôme naturel de vanille, cointreau, colorant (E102) et (E129).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON COMBAVA -->
+                <li class="cs-item" id="combava">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-combava_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-combava_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : combava">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Combava</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, fats : fatty acids saturated, carbohydrates, sugar, proteins, salt, <strong>milk</strong>, kaffir lime, coloring (E102), (E131) and (E129)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, combava, colorant (E102), (E131) et (E129).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, combava, colorant (E102), (E131) et (E129).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON COQUELICOT -->
+                <li class="cs-item" id="coquelicot">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-coquelicot_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-coquelicot_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : coquelicot">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Poppy" data-fr="Coquelicot">Coquelicot</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar fats : saturated fatty acids, carbohydrates, sugar, <strong>milk</strong>, proteins, salt, natural flavor of poppy, <strong>black sesame seeds</strong>, coloring (E129)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre matières grasses : acides gras saturés, glucides, sucre, <strong>lait</strong>, protéines, sel, arôme naturel de coquelicot, <strong>graines de sésame noir</strong>, colorant (E129).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre matières grasses : acides gras saturés, glucides, sucre, <strong>lait</strong>, protéines, sel, arôme naturel de coquelicot, <strong>graines de sésame noir</strong>, colorant (E129).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON FRAISE -->
+                <li class="cs-item" id="fraise">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-fraise_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-fraise_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : fraise">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Strawberry" data-fr="Fraise">Fraise</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, fats : acids saturated fat, carbohydrates, sugar, <strong>milk</strong>, proteins, salt, strawberry, color (E129)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, <strong>lait</strong>, protéines, sel, fraise, colorant (E129).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, <strong>lait</strong>, protéines, sel, fraise, colorant (E129).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON FRAISE BASILIC -->
+                <li class="cs-item" id="fraise-basilic">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-fraisebasilic_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-fraisebasilic_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : fraise basilic">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Strawberry Basil" data-fr="Fraise Basilic">Fraise Basilic</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, fat : saturated fatty acids, carbohydrates, sugar, proteins, salt, <strong>milk</strong>, strawberry, fresh basil, color (E102), (E129) and (E131)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, fraise, basilic frais, colorant (E102), (E129) et (E131).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, fraise, basilic frais, colorant (E102), (E129) et (E131).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON FRAMBOISE -->
+                <li class="cs-item" id="framboise">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-framboise_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-framboise_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : framboise">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Raspberry" data-fr="Framboise">Framboise</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, fats : acids saturated fat, carbohydrates, sugar, proteins, salt, <strong>milk</strong>, raspberry, color (E122)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, framboise, colorant (E122).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, framboise, colorant (E122).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON KALAMANSI -->
+                <li class="cs-item" id="kalamansi">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-kalamansi_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-kalamansi_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : kalamansi">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Kalamansi</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, fats : fatty acids saturated, carbohydrates, sugar, proteins, salt, <strong>milk</strong>, kalamansi, coloring (E102) and (E131)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, kalamansi, colorant (E102) et (E131).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, kalamansi, colorant (E102) et (E131).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON LAVANDE -->
+                <li class="cs-item" id="lavande">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-violette_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-violette_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : lavande">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Lavender" data-fr="Lavande">Lavande</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, fats : acids saturated fat, carbohydrates, sugar, proteins, salt, <strong>milk</strong>, lavender flavor (monopropylene glycol), coloring (E151), (E199) and (E132)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, arôme de lavande (monopropylene glycol), colorant (E151), (E199) et (E132).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, arôme de lavande (monopropylene glycol), colorant (E151), (E199) et (E132).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON LITCHI FRAMBOISE -->
+                <li class="cs-item" id="litchi-framboise">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-litchiframboise_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-litchiframboise_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : litchi framboise">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Raspberry Lychee" data-fr="Litchi Framboise">Litchi Framboise</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, fat : saturated fatty acids, carbohydrates, sugar, proteins, salt, <strong>milk</strong>, Lychee, raspberry, color (E122)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, Litchi, framboise, colorant (E122).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, Litchi, framboise, colorant (E122).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON MENTHE CHOCOLAT -->
+                <li class="cs-item" id="menthe-chocolat">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-menthechocolat_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-menthechocolat_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : menthe chocolat">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Mint Chocolate" data-fr="Menthe Chocolat">Menthe Chocolat</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, cocoa paste, cocoa butter, emulsifiers : sunflower lecithin, natural flavor, <strong>milk</strong> cream, stabilizer carrageenan coloring (E102) and (E131)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, pâte de cacao, beurre de cacao, émulsifiants : lécithine de tournesol, arôme naturel, crème de <strong>lait</strong>, stabilisant carraghénanes colorant (E102) et (E131).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, pâte de cacao, beurre de cacao, émulsifiants : lécithine de tournesol, arôme naturel, crème de <strong>lait</strong>, stabilisant carraghénanes colorant (E102) et (E131).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON MELON -->
+                <!--<li class="cs-item">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/melon.png" alt="Les macarons Hottekiet | macaron : melon">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Melon</span>
+                        </h3>
+                        <p class="cs-item-p">
+                            lalalala
+                        </p>
+                    </div>
+                </li>-->
+                <!-- MACARON MOJITO -->
+                <!--<li class="cs-item" id="mojito">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/mojito.png" alt="Les macarons Hottekiet | macaron : mojito">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Mojito</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, fats : acids saturated fat, carbohydrates, proteins, salt, <strong>milk</strong>, lime, fresh mint, white rum, color (E102) and (E131)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, protéines, sel, <strong>lait</strong>, citron vert, menthe fraiche, rhum blanc, colorant (E102) et (E131).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, protéines, sel, <strong>lait</strong>, citron vert, menthe fraiche, rhum blanc, colorant (E102) et (E131).
+                        </p>
+                    </div>
+                </li>-->
+                <!-- MACARON MYRTILLE -->
+                <li class="cs-item" id="myrtille">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-myrtille_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-myrtille_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : myrtille">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Blueberry" data-fr="Myrtille">Myrtille</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, fats : fatty acids saturated, carbohydrates, sugar, proteins, salt, <strong>milk</strong>, blueberry puree, blueberry, food coloring (E122) and (E151)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, purée de myrtille, myrtille, colorant alimentaire (E122) et (E151).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, purée de myrtille, myrtille, colorant alimentaire (E122) et (E151).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON NOUGAT -->
+                <li class="cs-item" id="nougat">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-nougat_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-nougat_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : nougat">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Nougat</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), glucose syrup, honey, sugar, flavoring natural vanilla, cocoa butter, <strong>milk</strong>, coloring (E102), (E129) and (E151)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), sirop de glucose, miel, sucre, arôme naturel de vanille, beurre de cacao, <strong>lait</strong>, colorant (E102), (E129) et (E151).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), sirop de glucose, miel, sucre, arôme naturel de vanille, beurre de cacao, <strong>lait</strong>, colorant (E102), (E129) et (E151).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON PAMPLEMOUSSE -->
+                <!--<li class="cs-item" id="pamplemousse">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/pamplemousse.png" alt="Les macarons Hottekiet | macaron : pamplemousse">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Grapefruit" data-fr="Pamplemousse">Pamplemousse</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar fats : saturated fatty acids, carbohydrates, proteins, salt, <strong>milk</strong>, grapefruit, coloring (E102) and (E129)."
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre matières grasses : acides gras saturés, glucides, protéines, sel, <strong>lait</strong>, pamplemousse, colorant (E102) et (E129).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre matières grasses : acides gras saturés, glucides, protéines, sel, <strong>lait</strong>, pamplemousse, colorant (E102) et (E129).
+                        </p>
+                    </div>
+                </li>-->
+                <!-- MACARON PATE A TARTINER -->
+                <li class="cs-item" id="pate-tartiner">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-patetartiner_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-patetartiner_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : pâte à tartiner">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Chocolate Spread" data-fr="Pâte à Tartiner">Pâte à Tartiner</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, palm oil, <strong>hazelnut</strong>, skimmed <strong>milk</strong> powder, low-fat cocoa, emulsifier <strong>soya</strong> lecithin, vanillin, without gluten, coloring (E102), (E129) and (E151)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, huile de palme, <strong>noisette</strong>, <strong>lait</strong> écrémé en poudre, cacao maigre, émulsifiant lécithine de <strong>soja</strong>, vanilline, sans gluten, colorant (E102), (E129) et (E151).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, huile de palme, <strong>noisette</strong>, <strong>lait</strong> écrémé en poudre, cacao maigre, émulsifiant lécithine de <strong>soja</strong>, vanilline, sans gluten, colorant (E102), (E129) et (E151).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON PISTACHE -->
+                <li class="cs-item" id="pistache">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-pistache_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-pistache_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : pistache">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Pistachio" data-fr="Pistache">Pistache</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and
+                        (E331), preservative (E202), thickener (E402) and (E415), water, sugar, <strong>milk</strong>, fat :
+                        saturated fatty acids, carbohydrates, proteins, salt, dextrose, <strong>cashew nuts</strong>, <strong>pistachio</strong>, sunflower oil,
+                        corn starch, flavors, emulsifier : <strong>soya</strong> lecithin, colors (E100) and (E141), coloring
+                        (E102), (E129) and (E131)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, <strong>lait</strong>, matières grasses : acides gras saturés, glucides, protéines, sel, dextrose, <strong>noix de cajou</strong>, <strong>pistache</strong>, huile de tournesol, amidon de mais, arômes, émulsifiant : lécithine de <strong>soja</strong>, colorants (E100) et (E141), colorant (E102), (E129) et (E131).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, <strong>lait</strong>, matières grasses : acides gras saturés, glucides, protéines, sel, dextrose, <strong>noix de cajou</strong>, <strong>pistache</strong>, huile de tournesol, amidon de mais, arômes, émulsifiant : lécithine de <strong>soja</strong>, colorants (E100) et (E141), colorant (E102), (E129) et (E131).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON PRALINE FEUILLETES -->
+                <li class="cs-item" id="praline-feuilletes">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-pralinefeuilletes_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-pralinefeuilletes_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : praliné feuilletés">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Puff Pastry Praline" data-fr="Praliné Feuilletés">Praliné Feuilletés</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, crumbled praline and natural, <strong>wheat</strong> flour, malt extract (<strong>barley</strong>), baking powder (E500), <strong>milk</strong> couverture chocolate, whole <strong>milk</strong> powder, natural vanilla flavor, <strong>hazelnuts</strong>, <strong>almonds</strong>, <strong>nuts</strong>, emulsifier : coloring <strong>soya</strong> lecithin (E102), (E129) and (E151), <strong>pistachio</strong>."
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, praliné émiettés et naturel, farine de <strong>blé</strong>, extrait de malt (<strong>orge</strong>), poudre à lever (E500), chocolat de couverture au <strong>lait</strong>, poudre de <strong>lait</strong> entier, arôme naturelle de vanille, <strong>noisettes</strong>, <strong>amandes</strong>, <strong>fruits à coques</strong>, émulsifiant : lécithine de <strong>soja</strong> colorant (E102), (E129) et (E151), <strong>pistache</strong>.">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, praliné émiettés et naturel, farine de <strong>blé</strong>, extrait de malt (<strong>orge</strong>), poudre à lever (E500), chocolat de couverture au <strong>lait</strong>, poudre de <strong>lait</strong> entier, arôme naturelle de vanille, <strong>noisettes</strong>, <strong>amandes</strong>, <strong>fruits à coques</strong>, émulsifiant : lécithine de <strong>soja</strong> colorant (E102), (E129) et (E151), <strong>pistache</strong>.
+                        </p>
+                    </div>
+                </li> 
+                <!-- MACARON ROSE -->
+                <li class="cs-item" id="rose">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-framboise_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-framboise_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : rose">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Rose</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202) and (E211), thickener (E402) and (E415), water, fats : saturated fatty acids, carbohydrates, sugar, proteins, salt, <strong>milk</strong>, rose flavor, rose syrup, color (E122)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202) et (E211), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, arôme de rose, sirop de rose, colorant (E122).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202) et (E211), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, <strong>lait</strong>, arôme de rose, sirop de rose, colorant (E122).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON SPECULOOS -->
+                <li class="cs-item" id="speculoss">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-speculoss_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-speculoss_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : spéculoos">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Speculoos" data-fr="Spéculoos">Spéculoos</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, fats : fatty acids saturated, carbohydrates, sugar, <strong>milk</strong>, proteins, salt, <strong>wheat</strong> flour, vegetable palm and rapeseed oil, Candy sugar syrup, baking powder : sodium hydrogen carbonate, <strong>soya</strong> flour, salt, cinnamon." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, <strong>lait</strong>, protéines, sel, farine de <strong>blé</strong>, huile végétale de palme et de colza, sirop de sucre Candy, poudre à lever : carbonate acide de sodium, farine de <strong>soja</strong>, sel, cannelle.">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, <strong>lait</strong>, protéines, sel, farine de <strong>blé</strong>, huile végétale de palme et de colza, sirop de sucre Candy, poudre à lever : carbonate acide de sodium, farine de <strong>soja</strong>, sel, cannelle.
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON VANILLE -->
+                <li class="cs-item" id="vanille">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-vanille_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-vanille_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : vanille">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Vanilla" data-fr="Vanille">Vanille</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, fats : fatty acids saturated, carbohydrates, sugar, proteins, <strong>milk</strong>, salt, vanilla powder." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, <strong>lait</strong>, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, monopropylène glycol, substances aromatisantes, colorant alimentaire (E122) et (E151).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, <strong>lait</strong>, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, monopropylène glycol, substances aromatisantes, colorant alimentaire (E122) et (E151).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON YUZU -->
+                <li class="cs-item" id="yuzu">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-yuzu_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-yuzu_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : yuzu">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Yuzu</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, <strong>milk</strong>, fats : acids saturated fat, carbohydrates, sugar, proteins, salt, yuzu, color (E102), <strong>pistachio</strong>." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, <strong>lait</strong>, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, yuzu, colorant (E102), <strong>pistache</strong>.">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, <strong>lait</strong>, matières grasses : acides gras saturés, glucides, sucre, protéines, sel, yuzu, colorant (E102), <strong>pistache</strong>.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <!-- MACARON SALES -->
+            <div  id="liste-sales">
+                <span class="cs-topper" data-en="LIST OF" data-fr="LISTE DES">LISTE DES</span>
+                <h2 class="cs-title" data-en="SALTED" data-fr="SALÉS">SALÉS</h2>
+            </div>
+            <ul id="productList" class="cs-card-group">
+                <!-- MACARON BLEU & NOIX -->
+                <li class="cs-item" id="bleu&noix">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-bleu&noix_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-bleu&noix_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : bleu & noix">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Blue Cheese & Walnuts" data-fr="Bleu & Noix">Bleu & Noix</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, pasteurized cow's <strong>milk</strong>, salt, lactic ferments, calcium chloride, coloring (E132)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, <strong>lait</strong> pasteurisé de vache, sel, ferments lactiques, chlorure de calcium, colorant (E132).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, <strong>lait</strong> pasteurisé de vache, sel, ferments lactiques, chlorure de calcium, colorant (E132).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON CHEVRE FIGUE -->
+                <li class="cs-item" id="chevre-figue">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-chevrefigue_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-chevrefigue_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : chèvre figue">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Goat Cheese Fig" data-fr="Chèvre Figue">Chèvre Figue</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, goat's <strong>milk</strong> raw whole, salt, rennet, ferments, coloring (E132) and vegetable charcoal, fig." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, <strong>lait</strong> de chèvre entier cru, sel, présure, ferments, colorant (E132) et charbon végétal, figue.">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, <strong>lait</strong> de chèvre entier cru, sel, présure, ferments, colorant (E132) et charbon végétal, figue.
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON FOIE GRAS -->
+                <li class="cs-item" id="foie-gras">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-foiegras_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-foiegras_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : foie gras">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Foie Gras</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, <strong>milk</strong>, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, block of foie gras duck, armagnac, salt, pepper, sugar, preservative : sodium nitrite, antioxidant, ascorbate sodium, espelette pepper or cumin." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, <strong>lait</strong>, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, protéines, sel, magrets de canard, sel, poivre, épices, antioxydants (E301), conservateur (E250), ferments, colorant (E129) et (E133).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, <strong>lait</strong>, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, protéines, sel, magrets de canard, sel, poivre, épices, antioxydants (E301), conservateur (E250), ferments, colorant (E129) et (E133).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON MAGRET DE CANARD -->
+                <li class="cs-item" id="magret-canard">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-magret_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-magret_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : magret de canard">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Duck Breast" data-fr="Magret de Canard">Magret de Canard</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, <strong>milk</strong>, corrector acidity (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, sugar, fats : saturated fatty acids, carbohydrates, proteins, salt, duck breasts, salt, pepper, spices, antioxidants (E301), preservative (E250), ferments, coloring (E129) and (E133)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, <strong>lait</strong>, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, protéines, sel, magrets de canard, sel, poivre, épices, antioxydants (E301), conservateur (E250), ferments, colorant (E129) et (E133).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, <strong>lait</strong>, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, sucre, matières grasses : acides gras saturés, glucides, protéines, sel, magrets de canard, sel, poivre, épices, antioxydants (E301), conservateur (E250), ferments, colorant (E129) et (E133).
+                        </p>
+                    </div>
+                </li>
+                <!-- MACARON SAUMON FUME -->
+                <li class="cs-item" id="saumon-fume">
+                    <picture class="cs-picture"  aria-hidden="true">
+                        <source srcset="https://lesmacaronshottekiet.fr/images/macaron-saumon_lesmacaronshottekiet.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="https://lesmacaronshottekiet.fr/images/macaron-saumon_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | macaron : saumon fumé">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name" data-en="Smoked Salmon" data-fr="Saumon Fumé">Saumon Fumé</span>
+                        </h3>
+                        <p class="cs-item-p" data-en="<strong>Almond</strong> powder, icing sugar, <strong>egg</strong> white, starch, acidity regulator (E330) and (E331), preservative (E202), thickener (E402) and (E415), water, fats : saturated fatty acids, carbohydrates, sugar, <strong>milk</strong>, proteins, salt, <strong>salmon</strong>, lemon, dill, color (E102) and (E129)." 
+                        data-fr="Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, <strong>lait</strong>, protéines, sel, <strong>saumon</strong>, citron, aneth, colorant (E102) et (E129).">
+                            Poudre d’<strong>amande</strong>, sucre glace, blanc d’<strong>oeufs</strong>, amidon, correcteur d’acidités (E330) et (E331), conservateur (E202), épaississant (E402) et (E415), eau, matières grasses : acides gras saturés, glucides, sucre, <strong>lait</strong>, protéines, sel, <strong>saumon</strong>, citron, aneth, colorant (E102) et (E129).
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>   
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  FOOTER                      -->
+    <!-- ============================================ -->
+    <footer id="footer">
+        <div class="cs-container">
+            <div class="cs-top">
+                <a aria-label="go back to home" class="cs-logo" href="https://lesmacaronshottekiet.fr">
+                    <picture>
+                        <source srcset="https://lesmacaronshottekiet.fr/images/logo-white_lesmacaronshottekiet.webp" type="image/webp">
+                        <img class="cs-logo-img" decoding="async" src="https://lesmacaronshottekiet.fr/images/logo-white_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | logo blanc" loading="lazy">
+                    </picture>
+                </a>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr#tableau" class="cs-link" data-en="Our Range" data-fr="Notre Gamme">Notre Gamme</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr/pages-ext/a-propos-de-nous.html" class="cs-link" data-en="About us" data-fr="À propos de nous">À propos de nous</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr/pages-ext/parfums.html" class="cs-link" data-en="Perfumes/Allergies" data-fr="Parfums/Allergies">Parfums/Allergies</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr#boutiques" class="cs-link" data-en="Shops" data-fr="Boutiques">Boutiques</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr/pages-ext/galerie.html" class="cs-link" data-en="Gallery" data-fr="Galerie">Galerie</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr#contact" class="cs-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cs-bottom">
+                <ul class="cs-social">
+                    <li class="cs-social-li">
+                        <a href="https://m.facebook.com/people/Les-Macarons-Hottekiet-Rue-Andr%C3%A9-Gardot-Rue-Saint-Aubin/100084830072876/" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener noreferrer">
+                            <picture>
+                                <source srcset="https://lesmacaronshottekiet.fr/images/icon-facebook_lesmacaronshottekiet.webp" type="image/webp">
+                                <img class="cs-social-icon cs-default" src="https://lesmacaronshottekiet.fr/images/icon-facebook_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | icon facebook" loading="lazy" decoding="async">
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="cs-social-li">
+                        <a href="https://www.instagram.com/macarons_hottekiet/" class="cs-social-link" aria-label="instagram" target="_blank" rel="noopener noreferrer">
+                            <picture>
+                                <source srcset="https://lesmacaronshottekiet.fr/images/icon-instagram_lesmacaronshottekiet.webp" type="image/webp">
+                                <img class="cs-social-icon cs-default" src="https://lesmacaronshottekiet.fr/images/icon-instagram_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | icon instagram" loading="lazy" decoding="async">
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="cs-social-li">
+                        <a href="https://lesmacaronshottekiet.fr" class="cs-social-link" aria-label="website" target="_blank">
+                            <picture>
+                                <source srcset="https://lesmacaronshottekiet.fr/images/icon-website_lesmacaronshottekiet.webp" type="image/webp">
+                                <img class="cs-social-icon cs-default" src="https://lesmacaronshottekiet.fr/images/icon-website_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | icon website" loading="lazy" decoding="async">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+                <span class="cs-copyright">
+                    <a href="https://www.linkedin.com/in/bgautreau" rel="noopener noreferrer" target="_blank" class="cs-copyright-link" data-en="Designed by Baptiste GAUTREAU - All rights reserved" data-fr="Conçu par Baptiste GAUTREAU - Tout droit réservé">Conçu par Baptiste GAUTREAU - Tout droit réservé</a><br>
+                    <a href="https://lesmacaronshottekiet.fr/pages-ext/declaration-cookies.html" class="cs-copyright-link" target="_blank" data-en="Cookie Declaration" data-fr="Déclaration des Cookies">Déclaration des Cookies</a><br>
+                    <a href="https://lesmacaronshottekiet.fr/pages-ext/mentions-legales.html" class="cs-copyright-link" target="_blank" data-en="Legal Information" data-fr="Mentions Légales">Mentions Légales</a>
+                </span>
+            </div>
+        </div>
+        <picture class="cs-background">
+            <source srcset="https://lesmacaronshottekiet.fr/images/fond-footer_lesmacaronshottekiet.webp" type="image/webp">
+            <img src="https://lesmacaronshottekiet.fr/images/fond-footer_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | fond footer" loading="lazy" decoding="async">
+        </picture>
+    </footer>
+
+    <!-- ============================================ -->
+    <!--                  LIENS JAVASCRIPT            -->
+    <!-- ============================================ -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
+    <script src="https://lesmacaronshottekiet.fr/script.js?v=1.4" type="text/javascript"></script> 
+</body>
+</html>

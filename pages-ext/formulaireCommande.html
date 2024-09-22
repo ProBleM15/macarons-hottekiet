@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://lesmacaronshottekiet.fr/style.css?v=1.4">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
+
+    <!--LIEN JS - BANNIERE COOKIES -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ca1e56fc-8b6e-4977-947d-0017e3c8759e"  type="text/javascript"></script>
+    
+    <title>Les macarons Hottekiet | Angers</title>
+    <link rel="icon" href="https://lesmacaronshottekiet.fr/images/logo-lesmacaronshottekiet.png" type="image/png">
+    <meta name="description" content="Les macarons Hottekiet à Angers vous régalent depuis 2012 avec des macarons artisanaux. Commandez dans nos boutiques pour une expérience gourmande unique.">
+    <meta name="keywords" content="macarons angers, Les macarons Hottekiet, meilleurs macarons Angers, macaron mariage angers, macarons marché de noël">
+    <link rel="canonical" href="https://lesmacaronshottekiet.fr" />
+    <meta name="tdm-policy" content="not-allowed">
+
+</head>
+<body class="PageCommande">
+
+    <!-- ============================================ -->
+    <!--                 NAVIGATION                   -->
+    <!-- ============================================ -->
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <a href="https://lesmacaronshottekiet.fr" class="cs-logo" aria-label="back to home">
+                <picture>
+                    <source srcset="https://lesmacaronshottekiet.fr/images/logo-lesmacaronshottekiet-black.webp" type="image/webp">
+                    <img src="https://lesmacaronshottekiet.fr/images/logo-lesmacaronshottekiet-black.webp" alt="Les macarons Hottekiet | logo">
+                </picture>
+            </a>
+            <nav class="cs-nav" role="navigation"> 
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr#tableau" class="cs-li-link" data-en="Our Range" data-fr="Notre Gamme">
+                                Notre Gamme
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr/pages-ext/a-propos-de-nous.html" class="cs-li-link" data-en="About us" data-fr="À propos de nous">
+                                À propos de nous
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr/pages-ext/parfums.html" class="cs-li-link" data-en="Perfumes/Allergies" data-fr="Parfums/Allergies">
+                                Parfums/Allergies
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr#boutiques" class="cs-li-link" data-en="Shops" data-fr="Boutiques">
+                                Boutiques
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr/pages-ext/galerie.html" class="cs-li-link" data-en="Gallery" data-fr="Galerie">
+                                Galerie
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="https://lesmacaronshottekiet.fr#contact" class="cs-li-link">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="cs-li-flag">
+                            <button id="changeLanguageBtn" >
+                                <img id="flagIcon" alt="Drapeau">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="https://lesmacaronshottekiet.fr/pages-ext/formulaireCommande.html" class="cs-button-solid cs-nav-button" data-en="Order" data-fr="Commander">Commander</a>           
+        </div>                           
+    </header>
+
+    <section class="FormulaireCommande">
+        <div class="Formulaire">
+            <div class="TitreFormulaire">
+                <span class="cs-topper" data-en="ORDER" data-fr="COMMANDER">COMMANDER</span>
+                <h2 class="cs-title" data-en="ONLINE" data-fr="EN LIGNE">EN LIGNE</h2>
+            </div>
+            
+            <form id="commandeForm">
+                <div class="contact-form">
+                    <h2 data-en="YOUR CONTACT DETAILS" data-fr="VOS COORDONNÉES">VOS COORDONNÉES</h2>
+                    <div class="form-group">
+                        <label for="nom" data-en="NAME" data-fr="NOM">NOM</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom..." required>
+                        <span id="nomError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom" data-en="FIRST NAME" data-fr="PRÉNOM">PRÉNOM</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom..." required>
+                        <span id="prenomError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-en="E-MAIL ADDRESS" data-fr="ADRESSE E-MAIL">ADRESSE E-MAIL</label>
+                        <input type="email" id="email" name="email" placeholder="Votre mail..." required>
+                        <span id="emailError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone" data-en="PHONE NUMBER" data-fr="NUMÉRO DE TÉLÉPHONE">NUMÉRO DE TÉLÉPHONE</label>
+                        <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" placeholder="Votre numéro de téléphone..." required>
+                        <small>Format : 0785931440</small>
+                        <span id="telError" class="error"></span>
+                    </div>
+                </div>
+                
+                <div class="selection-container">
+                    <label for="boiteSelect">
+                        <h2 data-en="SELECT YOUR ORDER" data-fr="SÉLECTIONNER VOTRE COMMANDE">SÉLECTIONNER VOTRE COMMANDE</h2>
+                    </label>
+                    <select id="boiteSelect" name="boite" required>
+                        <option value="" data-en="-- Select your format --" data-fr="-- Sélectionner votre format --">-- Sélectionner votre format --</option>
+                        <option value="4" id="sachet4" data-type="sachet" data-en="SET OF 4 MACARONS" data-fr="SACHET DE 4 MACARONS">SACHET DE 4 MACARONS</option>
+                        <option value="6" id="sachet6" data-type="sachet" data-en="SET OF 6 MACARONS" data-fr="SACHET DE 6 MACARONS">SACHET DE 6 MACARONS</option>
+                        <option value="8" id="sachet8" data-type="sachet" data-en="SET OF 8 MACARONS" data-fr="SACHET DE 8 MACARONS">SACHET DE 8 MACARONS</option>
+                        <option value="7" id="coffret7" data-type="coffret" data-en="BOX OF 7 MACARONS" data-fr="COFFRET DE 7 MACARONS">COFFRET DE 7 MACARONS</option>
+                        <option value="12" id="coffret12" data-type="coffret" data-en="BOX OF 12 MACARONS" data-fr="COFFRET DE 12 MACARONS">COFFRET DE 12 MACARONS</option>
+                        <option value="16" id="coffret16" data-type="coffret" data-en="BOX OF 16 MACARONS" data-fr="COFFRET DE 16 MACARONS">COFFRET DE 16 MACARONS</option>
+                        <option value="20" id="coffret20" data-type="coffret" data-en="BOX OF 20 MACARONS" data-fr="COFFRET DE 20 MACARONS">COFFRET DE 20 MACARONS</option>
+                        <option value="12" id="boite12" data-type="boite" data-en="SET OF 12 MACARONS" data-fr="BOÎTE DE 12 MACARONS">BOÎTE DE 12 MACARONS</option>
+                        <option value="16" id="boite16" data-type="boite" data-en="SET OF 16 MACARONS" data-fr="BOÎTE DE 16 MACARONS">BOÎTE DE 16 MACARONS</option>
+                        <option value="20" id="boite20" data-type="boite" data-en="SET OF 20 MACARONS" data-fr="BOÎTE DE 20 MACARONS">BOÎTE DE 20 MACARONS</option>
+                        <option value="25" id="boite25" data-type="boite" data-en="SET OF 25 MACARONS" data-fr="BOÎTE DE 25 MACARONS">BOÎTE DE 25 MACARONS</option>
+                        <option value="30" id="boite30" data-type="boite" data-en="SET OF 30 MACARONS" data-fr="BOÎTE DE 30 MACARONS">BOÎTE DE 30 MACARONS</option>
+                        <option value="40" id="boite40" data-type="boite" data-en="SET OF 40 MACARONS" data-fr="BOÎTE DE 40 MACARONS">BOÎTE DE 40 MACARONS</option>
+                        <option value="55" id="pyramide55" data-type="pyramide" data-en="PYRAMID OF 55 MACARONS" data-fr="PYRAMIDE DE 55 MACARONS">PYRAMIDE DE 55 MACARONS</option>
+                        <option value="75" id="pyramide75" data-type="pyramide" data-en="PYRAMID OF 75 MACARONS" data-fr="PYRAMIDE DE 75 MACARONS">PYRAMIDE DE 75 MACARONS</option>
+                        <option value="100" id="pyramide100" data-type="pyramide" data-en="PYRAMID OF 100 MACARONS" data-fr="PYRAMIDE DE 100 MACARONS">PYRAMIDE DE 100 MACARONS</option>
+                        <option value="126" id="pyramide126" data-type="pyramide" data-en="PYRAMID OF 126 MACARONS" data-fr="PYRAMIDE DE 126 MACARONS">PYRAMIDE DE 126 MACARONS</option>
+                        <option value="155" id="pyramide155" data-type="pyramide" data-en="PYRAMID OF 155 MACARONS" data-fr="PYRAMIDE DE 155 MACARONS">PYRAMIDE DE 155 MACARONS</option>
+                        <option value="190" id="pyramide190" data-type="pyramide" data-en="PYRAMID OF 190 MACARONS" data-fr="PYRAMIDE DE 190 MACARONS">PYRAMIDE DE 190 MACARONS</option>
+                    </select>
+                </div>
+
+                <div id="parfumsContainer" class="parfums-container" data-capacite="0"></div>
+                
+                <div id="messageErreur" class="error"></div>
+                
+                <div class="flex-center">
+                    <button type="button" onclick="validerBoite()" data-en="VALIDATE FORMAT" data-fr="VALIDER LE FORMAT">VALIDER LE FORMAT</button>
+                </div>
+                
+                <div id="commandesRecap" class="commandes-recap"></div>
+                
+                <div id="total" class="total"></div>
+
+                <div class="date-time-selector date-time-box">
+                    <label for="dateSelect" data-en="WITHDRAWAL DATE" data-fr="DATE DE RETRAIT">DATE DE RETRAIT</label>
+                    <div class="input-wrapper" id="dateWrapper">
+                        <input type="text" id="dateSelect" name="date" placeholder="Sélectionnez une date..." required>
+                        
+                        <span id="dateError" class="error"></span>
+                    </div>
+                    
+                    <label class="titretime" for="timeSelect" data-en="PICK-UP TIME" data-fr="HEURE DE RETRAIT">HEURE DE RETRAIT</label>
+                    <div class="input-wrapper" id="timeWrapper">
+                        <select id="timeSelect" name="time" required>
+                            <option value="" data-en="Select a time" data-fr="Sélectionnez une heure">Sélectionnez une heure</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                        </select>
+                        <span id="timeError" class="error"></span>
+                    </div>
+                </div>
+
+                <div class="payment-selector">
+                    <span class="payment-label" data-en="SELECT A PAYMENT METHOD" data-fr="SÉLECTIONNEZ UN MODE DE PAIEMENT">SÉLECTIONNEZ UN MODE DE PAIEMENT</span>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="paymentOption" value="cash" required>
+                            <span data-en="In cash" data-fr="En espèces">En espèces</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="paymentOption" value="credit-card">
+                            <span data-en="Credit card" data-fr="Carte de crédit">Carte de crédit</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="paymentOption" value="debit-card">
+                            <span data-en="Debit card" data-fr="Carte de débit">Carte de débit</span>
+                        </label>
+                    </div>
+                    <div id="paymentError" class="error"></div>
+                </div>
+
+                <div class="delivery-selector">
+                    <label class="delivery-label" data-en="DELIVERY METHOD" data-fr="MODE DE LIVRAISON">MODE DE LIVRAISON</label>
+                    <div class="delivery-options">
+                        <label class="delivery-option">
+                            <input type="radio" name="deliveryMethod" value="pickup" checked>
+                            <span data-en="To go : 8 rue André Gardot, Angers" data-fr="À emporter : 8 rue André Gardot, Angers">À emporter : 8 rue André Gardot, Angers</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="additional-info">
+                    <p data-en="Please note that this request form is not a confirmation of payment for your order. We will contact you to confirm your order." data-fr="Veuillez noter que ce formulaire de demande n'est pas une confirmation de paiement de votre commande. Nous vous contacterons pour votre confirmation de commande.">Veuillez noter que ce formulaire de demande n'est pas une confirmation de paiement de votre commande. Nous vous contacterons pour votre confirmation de commande.</p>
+                    <p data-en="<strong>If you have any questions, please call us at +33785931440</strong>" data-fr="<strong>Si vous avez des questions, appelez-nous au +33785931440</strong>"><strong>Si vous avez des questions, appelez-nous au +33785931440</strong></p>
+                </div>
+
+                <div class="check-confi">
+                    <input type="checkbox" id="confidentialite" name="confidentialite">
+                    <label for="confidentialite" data-en="I accept the <a href='https://lesmacaronshottekiet.fr/pages-ext/mentions-legales.html' target='_blank' rel='noopener noreferrer'>privacy terms</a>." data-fr="J'accepte les <a href='https://lesmacaronshottekiet.fr/pages-ext/mentions-legales.html' target='_blank' rel='noopener noreferrer'>conditions de confidentialité</a>.">J'accepte les <a href='https://lesmacaronshottekiet.fr/pages-ext/mentions-legales.html' target='_blank' rel='noopener noreferrer'>conditions de confidentialité</a>.</label>
+                    <span id="confidentialiteError" class="error"></span>
+                </div>
+                </label> 
+
+                <div class="flex-center2"><button id="submitCommande" type="submit" data-en="<strong>VALIDATE ORDER</strong>" data-fr="<strong>VALIDER LA COMMANDE</strong>"><strong>VALIDER LA COMMANDE</strong></button></div>
+                <div id="messageContainer"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  FOOTER                      -->
+    <!-- ============================================ -->
+    <footer id="footer">
+        <div class="cs-container">
+            <div class="cs-top">
+                <a aria-label="go back to home" class="cs-logo" href="https://lesmacaronshottekiet.fr">
+                    <picture>
+                        <source srcset="https://lesmacaronshottekiet.fr/images/logo-white_lesmacaronshottekiet.webp" type="image/webp">
+                        <img class="cs-logo-img" decoding="async" src="https://lesmacaronshottekiet.fr/images/logo-white_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | logo blanc" loading="lazy">
+                    </picture>
+                </a>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr#tableau" class="cs-link" data-en="Our Range" data-fr="Notre Gamme">Notre Gamme</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr/pages-ext/a-propos-de-nous.html" class="cs-link" data-en="About us" data-fr="À propos de nous">À propos de nous</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr/pages-ext/parfums.html" class="cs-link" data-en="Perfumes/Allergies" data-fr="Parfums/Allergies">Parfums/Allergies</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr#boutiques" class="cs-link" data-en="Shops" data-fr="Boutiques">Boutiques</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr/pages-ext/galerie.html" class="cs-link" data-en="Gallery" data-fr="Galerie">Galerie</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://lesmacaronshottekiet.fr#contact" class="cs-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cs-bottom">
+                <ul class="cs-social">
+                    <li class="cs-social-li">
+                        <a href="https://m.facebook.com/people/Les-Macarons-Hottekiet-Rue-Andr%C3%A9-Gardot-Rue-Saint-Aubin/100084830072876/" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener noreferrer">
+                            <picture>
+                                <source srcset="https://lesmacaronshottekiet.fr/images/icon-facebook_lesmacaronshottekiet.webp" type="image/webp">
+                                <img class="cs-social-icon cs-default" src="https://lesmacaronshottekiet.fr/images/icon-facebook_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | icon facebook" loading="lazy" decoding="async">
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="cs-social-li">
+                        <a href="https://www.instagram.com/macarons_hottekiet/" class="cs-social-link" aria-label="instagram" target="_blank" rel="noopener noreferrer">
+                            <picture>
+                                <source srcset="https://lesmacaronshottekiet.fr/images/icon-instagram_lesmacaronshottekiet.webp" type="image/webp">
+                                <img class="cs-social-icon cs-default" src="https://lesmacaronshottekiet.fr/images/icon-instagram_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | icon instagram" loading="lazy" decoding="async">
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="cs-social-li">
+                        <a href="https://lesmacaronshottekiet.fr" class="cs-social-link" aria-label="website" target="_blank" rel="noopener noreferrer">
+                            <picture>
+                                <source srcset="https://lesmacaronshottekiet.fr/images/icon-website_lesmacaronshottekiet.webp" type="image/webp">
+                                <img class="cs-social-icon cs-default" src="https://lesmacaronshottekiet.fr/images/icon-website_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | icon website" loading="lazy" decoding="async">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+                <span class="cs-copyright">
+                    <a href="https://www.linkedin.com/in/bgautreau" rel="noopener noreferrer" target="_blank" class="cs-copyright-link" rel="noopener noreferrer" data-en="Designed by Baptiste GAUTREAU - All rights reserved" data-fr="Conçu par Baptiste GAUTREAU - Tout droit réservé">Conçu par Baptiste GAUTREAU - Tout droit réservé</a><br>
+                    <a href="https://lesmacaronshottekiet.fr/pages-ext/declaration-cookies.html" class="cs-copyright-link" target="_blank" rel="noopener noreferrer" data-en="Cookie Declaration" data-fr="Déclaration des Cookies">Déclaration des Cookies</a><br>
+                    <a href="https://lesmacaronshottekiet.fr/pages-ext/mentions-legales.html" class="cs-copyright-link" target="_blank" rel="noopener noreferrer" data-en="Legal Information" data-fr="Mentions Légales">Mentions Légales</a>
+                </span>
+            </div>
+        </div>
+        <picture class="cs-background">
+            <source srcset="https://lesmacaronshottekiet.fr/images/fond-footer_lesmacaronshottekiet.webp" type="image/webp">
+            <img src="https://lesmacaronshottekiet.fr/images/fond-footer_lesmacaronshottekiet.webp" alt="Les macarons Hottekiet | fond footer" loading="lazy" decoding="async">
+        </picture>
+    </footer>   
+
+    <!-- ============================================ -->
+    <!--                  LIENS JAVASCRIPT            -->
+    <!-- ============================================ -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js" type="text/javascript"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="../script.js"></script> 
+</body>
+</html>

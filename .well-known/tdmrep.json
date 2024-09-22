@@ -1,0 +1,23 @@
+{
+  "version": "1.1",
+  "policy": {
+      "text-mining": "not-allowed",
+      "data-mining": "not-allowed"
+  },
+  "disallow": [
+      "/admin/",
+      "/private/",
+      "/user-data/",
+      "/sensitive-info/"
+  ],
+  "allow": [
+      "/",
+      "/public/"
+  ],
+  "rights": "Tous droits réservés. Le texte et les données de ce site sont protégés par les lois sur la propriété intellectuelle. Toute extraction automatisée de données est interdite sans autorisation préalable.",
+  "contact": {
+      "email": "baptistegautreau07@gmail.com",
+      "url": "https://lesmacaronshottekiet.fr/#contact"
+  },
+  "description": "Ce fichier définit la politique de Text and Data Mining (TDM) du site. L'extraction automatisée de données est interdite pour les sections protégées. Pour toute demande d'accès ou d'autorisation, veuillez nous contacter via l'adresse email ou le formulaire de contact indiqué."
+}
